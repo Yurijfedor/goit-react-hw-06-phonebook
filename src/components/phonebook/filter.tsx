@@ -5,10 +5,6 @@ import React from "react";
 
 export const Filter: React.FC = () => {
   const dispatch = useAppDispatch();
-  // const getFilterValue = (evt) => {
-  //   onChange(evt.target.value);
-  // };
-
   return (
     <LabelFilterEl>
       Find contacts by name

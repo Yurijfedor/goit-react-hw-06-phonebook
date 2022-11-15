@@ -11,7 +11,6 @@ interface IProps {
 
 export const ContactItem: React.FC<IProps> = ({
   contactInfo: { name, number, id },
-  // onDeleteContact,
 }) => {
   const dispatch = useAppDispatch();
   return (

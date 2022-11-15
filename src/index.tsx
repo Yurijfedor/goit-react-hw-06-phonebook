@@ -8,17 +8,9 @@ import { App } from "./components/App";
 import "./index.css";
 import { theme } from "./constans/index";
 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <ThemeProvider theme={theme}>
-//       <App />
-//     </ThemeProvider>
-//   </React.StrictMode>,
-//   document.getElementById("root")
-// );
 
 const container = document.getElementById("root");
-const root = createRoot(container!); // createRoot(container!) if you use TypeScript
+const root = createRoot(container!); 
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>

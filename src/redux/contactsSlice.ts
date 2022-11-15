@@ -16,9 +16,6 @@ const contactSlice = createSlice({
   name: "contacts",
   initialState: contactsInitialState || [],
   reducers: {
-    filteredContact(state, action: PayloadAction<Contact[]>) {
-      return (state = action.payload);
-    },
     addContact(state, action: PayloadAction<Contact>) {
       state.push(action.payload);
       localStorage.setItem(LS_KEY, JSON.stringify(state));
@@ -31,8 +28,7 @@ const contactSlice = createSlice({
   },
 });
 
-export const { addContact, deleteContact, filteredContact } =
-  contactSlice.actions;
+export const { addContact, deleteContact } = contactSlice.actions;
 
 export const selectName = (state: RootState) => state.contacts;
 
