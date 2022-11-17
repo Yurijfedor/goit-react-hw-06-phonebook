@@ -8,13 +8,12 @@ export interface Contact {
   number: string;
 }
 
-const contactsInitialState: Contact[] = JSON.parse(
-  localStorage.getItem(LS_KEY) || "false"
-);
+const contactsInitialState: Contact[] = [];
 
 const contactSlice = createSlice({
   name: "contacts",
-  initialState: contactsInitialState || [],
+  initialState: contactsInitialState,
+
   reducers: {
     addContact(state, action: PayloadAction<Contact>) {
       state.push(action.payload);
